@@ -3,6 +3,7 @@ from flask import Flask, render_template, request
 import json
 
 app = Flask("Web Translator")
+app = Flask(__name__, template_folder='templates')
 
 @app.route("/englishToFrench")
 def englishToFrench():
